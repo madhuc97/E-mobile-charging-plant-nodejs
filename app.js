@@ -13,7 +13,7 @@ app.use(cors(corsOptions));
 
 app.set('json spaces', 4);
 
-app.listen(3000, () => console.log("Server running at port " + PORT));
+app.listen(PORT, () => console.log("Server running at port " + PORT));
 
 app.post('/checkout', async (req, res) => {
     try {
