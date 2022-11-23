@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const makeRequest = require('./utilities').makeRequest;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use(cors(corsOptions));
 
 app.set('json spaces', 4);
 
-app.listen(3000, () => console.log("Server running at port " + 3000));
+app.listen(3000, () => console.log("Server running at port " + PORT));
 
 app.post('/checkout', async (req, res) => {
     try {
