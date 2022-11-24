@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const corsOptions = {
-    origin: "http://localhost",
+    origin: "http://localhost:8100",
     credentials:true,
     optionSuccessStatus:200
   };
@@ -21,7 +21,7 @@ app.post('/checkout', async (req, res) => {
     try {
         body = {
             amount:145,
-            complete_payment_url:"http://example.com/complete",
+            complete_payment_url:"https://shrouded-meadow-81145.herokuapp.com/home",
             country:"IN",
             currency:"INR",
             error_payment_url:"http://example.com/error",
@@ -72,4 +72,20 @@ app.get('/country', async (req, res) => {
         res.json(error);
       }
 
+})
+
+app.get('/checkout1', async (req, res) => {
+
+    try {
+        const result = await makeRequest('GET', '/v1/checkout/checkout_fd72a81e80c743d676a50aa81afb666a');
+    
+        res.json(result);
+      } catch (error) {
+        res.json(error);
+      }
+
+})
+
+app.get('/home', async (req, res) => {
+    res.json('/home');
 })
