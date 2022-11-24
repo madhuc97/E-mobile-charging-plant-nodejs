@@ -5,11 +5,11 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-const corsOptions = {
-    origin: "http://localhost:8100"
-  };
+// const corsOptions = {
+//     origin: "http://localhost:8100"
+//   };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 app.set('json spaces', 4);
 
