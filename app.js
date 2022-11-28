@@ -77,7 +77,7 @@ app.get('/country', async (req, res) => {
 app.get('/checkout1', async (req, res) => {
 
     try {
-        const result = await makeRequest('GET', '/v1/checkout/checkout_fd72a81e80c743d676a50aa81afb666a');
+        const result = await makeRequest('GET', '/v1/checkout/'+ req.id);
     
         res.json(result);
       } catch (error) {
