@@ -21,10 +21,10 @@ app.post('/checkout', async (req, res) => {
     try {
         body = {
             amount:145,
-            complete_payment_url:"https://shrouded-meadow-81145.herokuapp.com/home",
+            complete_payment_url:"https://peppy-ward-280008.web.app/home",
             country:"IN",
             currency:"INR",
-            error_payment_url:"http://example.com/error",
+            error_payment_url:"https://peppy-ward-280008.web.app/checkout-description",
             merchant_reference_id:"950ae8c6-78",
             cardholder_preferred_currency:true,
             language:"en",
@@ -74,18 +74,15 @@ app.get('/country', async (req, res) => {
 
 })
 
-app.get('/checkout1', async (req, res) => {
+app.get('/retrievecheckout/:id', async (req, res) => {
 
     try {
-        const result = await makeRequest('GET', '/v1/checkout/'+ req.id);
-    
+        console.log(req.params.id);
+        const result = await makeRequest('GET', '/v1/checkout/' + req.params.id);
+
         res.json(result);
       } catch (error) {
         res.json(error);
       }
 
-})
-
-app.get('/home', async (req, res) => {
-    res.json('/home');
 })
