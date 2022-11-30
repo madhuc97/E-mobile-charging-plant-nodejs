@@ -9,14 +9,15 @@ const corsOptions = {
     origin: ["http://localhost:8100","https://peppy-ward-280008.web.app"],
     default: "http://localhost",
     credentials:true,
+    optionsSuccessStatus: 200
   };
 
-  app.all('*', function(req, res, next) {
-    const origin = cors.origin.contains(req.header('origin').toLowerCase()) ? req.headers.origin : cors.default;
-    res.header("Access-Control-Allow-Origin", origin);
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
+//   app.all('*', function(req, res, next) {
+//     const origin = cors.origin.contains(req.header('origin').toLowerCase()) ? req.headers.origin : cors.default;
+//     res.header("Access-Control-Allow-Origin", origin);
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+//   });
 
 app.use(cors(corsOptions));
 
