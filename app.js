@@ -29,7 +29,7 @@ app.post('/checkout', async (req, res) => {
     try {
         body = {
             amount:145,
-            complete_payment_url:"https://peppy-ward-280008.web.app/home",
+            complete_payment_url:"https://peppy-ward-280008.web.app/checkout-description",
             country:"IN",
             currency:"INR",
             error_payment_url:"https://peppy-ward-280008.web.app/checkout-description",
