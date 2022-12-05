@@ -21,6 +21,9 @@ async function makeRequest(method, urlPath, body) {
             method: httpMethod,
             headers: {
                 'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Origin': '*',
                 salt: salt,
                 timestamp: timestamp,
                 signature: signature,
