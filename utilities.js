@@ -23,7 +23,7 @@ async function makeRequest(method, urlPath, body) {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
                 'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Origin': 'http://localhost:8100',
                 salt: salt,
                 timestamp: timestamp,
                 signature: signature,
