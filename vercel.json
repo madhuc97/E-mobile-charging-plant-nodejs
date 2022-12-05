@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "name": "e-mobile charging plant",
+    "builds": [
+       { "src": "app.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+       { "src": "/(.*)", "dest": "/app.js" }
+    ]
+ }
