@@ -28,10 +28,10 @@ app.post('/checkout', async (req, res) => {
     try {
         body = {
             amount:145,
-            complete_payment_url:"https://peppy-ward-280008.web.app/home",
+            complete_payment_url:"",
             country:"IN",
             currency:"INR",
-            error_payment_url:"https://peppy-ward-280008.web.app/checkout-description",
+            error_payment_url:"",
             merchant_reference_id:"950ae8c6-78",
             cardholder_preferred_currency:true,
             language:"en",
