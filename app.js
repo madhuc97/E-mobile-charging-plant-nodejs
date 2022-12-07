@@ -27,7 +27,7 @@ app.listen(PORT, () => console.log("Server running at port " + PORT));
 app.post('/checkout', async (req, res) => {
     try {
         body = {
-            amount:145,
+            amount:500,
             complete_payment_url:"",
             country:"IN",
             currency:"INR",
