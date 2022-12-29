@@ -40,7 +40,7 @@ app.post('/checkout', async (req, res) => {
             },
             payment_method_type_categories:['bank_redirect','bank_transfer','card','cash','ewallet'],
             payment_method_types_include:[],
-            expiration:"1671532380",
+            expiration:"1675120338",
         };
         const result = await makeRequest('POST', '/v1/checkout', body);
     
